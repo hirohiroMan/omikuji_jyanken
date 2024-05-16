@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>じゃんけん</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet" />
+  <link rel="stylesheet" href="css/janken.css">
+</head>
+
+<body>
+  <main>
+
+    <section>
+      <h1>じゃんけん</h1>
+    </section>
+
+    <section id="player">
+      <p>コンピュータの手は？？</p>
+    </section>
+
+    <section id="victory">
+      <p>勝敗は？？</p>
+    </section>
+
+    <section class="button">
+      <button id="button1">グー</button>
+      <button id="button2">チョキ</button>
+      <button id="button3">パー</button>
+    </section>
+
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+
+    $("#button1").on("click", function () {
+      const mini = 0;
+      const max = 2;
+      const randomNumber = Math.floor(Math.random() * (max - mini + 1)) + mini;
+      console.log(randomNumber);
+      // ルール　0-33グー 　34-67　チョキ　68-99パー
+
+      // if (randomNumber ===) {
+      //   // alert("グー")
+      //   $("#player").text("グー");
+      // } else if (34 <= randomNumber && randomNumber < 68) {
+      //   // alert("チョキ")
+      //   $("#player").text("チョキ");
+      // } else {
+      //   // alert("パー")
+      //   $("#player").text("パー");
+      // }
+
+      if (randomNumber === 0) {
+        // alert("グー")
+        $("#player").text("グー");
+      } else if (randomNumber === 1) {
+        // alert("チョキ")
+        $("#player").text("チョキ");
+      } else {
+        // alert("パー")
+        $("#player").text("パー");
+      }
+
+      //勝敗の表示ルールを作成 
+      if (randomNumber == 0 && button1) {
+        console.log("引き分け")
+        $("#victory").text("引き分け");
+      } else if (randomNumber === 1 && button1) {
+        console.log("勝ち");
+        $("#victory").text("勝ち");
+      } else if (randomNumber == 2 && button1) {
+        console.log("負け");
+        $("#victory").text("負け");
+      }
+      // else if (randomNumber == 0 && button2) {
+      //   console.log("負け");
+      //   $("#victory").text("負け");
+      // } else if (randomNumber == 1 && button2) {
+      //   console.log("あいこ");
+      //   $("#victory").text("あいこ");
+      // } else if (randomNumber == 2 && button2) {
+      //   console.log("勝ち");
+      //   $("#victory").text("勝ち");
+      //   // グーとパー
+      // }
+      // else if (randomNumber === 0 && button3) {
+      //   console.log("勝ち");
+      //   $("#victory").text("勝ち");
+      //   // チョキとパー
+      // } else if (randomNumber === 1 && button3) {
+      //   console.log("負け");
+      //   $("#victory").text("負け");
+      // } else {
+      //   console.log("あいこ");
+      //   $("#victory").text("あいこ");
+      // }
+
+    });
+
+  </script>
+  <script>
+    // チョキボタンの際
+    $("#button2").on("click", function () {
+      const mini = 0;
+      const max = 2;
+      const randomNumber = Math.floor(Math.random() * (max - mini + 1)) + mini;
+      console.log(randomNumber);
+
+      if (randomNumber === 0) {
+        // alert("グー")
+        $("#player").text("グー");
+      } else if (randomNumber === 1) {
+        // alert("チョキ")
+        $("#player").text("チョキ");
+      } else {
+        // alert("パー")
+        $("#player").text("パー");
+      }
+
+      //勝敗の表示ルールを作成 
+      if (randomNumber === 0 && button3) {
+        console.log("勝ち");
+        $("#victory").text("勝ち");
+        // チョキとパー
+      } else if (randomNumber === 1 && button3) {
+        console.log("負け");
+        $("#victory").text("負け");
+      } else {
+        console.log("あいこ");
+        $("#victory").text("あいこ");
+      }
+
+    });
+
+  </script>
+  <script>
+    // ぐーボタンの際
+    $("#button3").on("click", function () {
+      const mini = 0;
+      const max = 2;
+      const randomNumber = Math.floor(Math.random() * (max - mini + 1)) + mini;
+      console.log(randomNumber);
+
+      if (randomNumber === 0) {
+        // alert("グー")
+        $("#player").text("グー");
+      } else if (randomNumber === 1) {
+        // alert("チョキ")
+        $("#player").text("チョキ");
+      } else {
+        // alert("パー")
+        $("#player").text("パー");
+      }
+
+      //勝敗の表示ルールを作成 
+      if (randomNumber == 0 && button3) {
+        console.log("勝ち");
+        $("#victory").text("勝ち");
+      } else if (randomNumber == 1 && button3) {
+        console.log("負け");
+        $("#victory").text("負け");
+      } else if (randomNumber == 2 && button3) {
+        console.log("あいこ");
+        $("#victory").text("あいこ");
+      }
+
+    });
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おみくじ</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main>
+
+    <section class="title_section">
+      <h1>おみくじ</h1>
+    </section>
+
+    <section class="result_section" id="result">
+      <p>結果は？？</p>
+    </section>
+
+    <section class="button_section">
+      <button id="button">おみくじをひく</button>
+    </section>
+
+  </main>
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+ </script>
+  <script>
+// 復習
+    // const text1 ="G's"
+    // const text2 ="ACADEMY"
+    // alert(text1 + text2);
+    // console.log(text1 + " " + text2);
+
+    
+    // // 乱数の練習
+    // const randomNumber = Math.floor(Math.random() * 5);
+    // // alert(randomNumber);
+    // console.log(randomNumber);
+
+    // // 1-9 を作る際は最後に1を足す
+    // const randomNumber1 = Math.floor(Math.random() * 9) + 1;
+    // // alert(randomNumber1);
+    // console.log(randomNumber1);
+
+    // // 5-10 を作る際は最後に1を足す
+    // const randomNumber2 = Math.floor(Math.random() * 6) + 5;
+    // // alert(randomNumber2);
+    // console.log(randomNumber2);
+
+    // // 50-99 を作る際は最後に1を足す
+    // const randomNumber3 = Math.floor(Math.random() * 50) + 50;
+    // // alert(randomNumber3);
+    // console.log(randomNumber3);
+
+    // // 事前に使ったもの
+
+    // const mini = 0;
+    // const max = 6;
+    // const randomNumber6 = Math.floor(Math.random() * ( max - mini + 1)) + mini;
+    // console.log(randomNumber6);
+
+    // // 条件分岐　まずはかっこを作って後から入れ込む
+    // // if(){} else if {}
+    // // ルール　0大吉　1中吉　2小吉　3吉　4凶
+    // if ( randomNumber6 === 0) {
+    //   // alert ( "大吉")
+    //   console.log("大吉");
+    //  } else if ( randomNumber6 === 1 ) {
+    //   // alert( "中吉" )
+    //   console.log("中吉");
+    //  } else if (randomNumber6 === 2) {
+    //   // alert( "小吉" )
+    //   console.log("小吉");
+    // } else if (randomNumber6 === 3) {
+    //   // alert( "吉" )
+    //   console.log("吉");
+    // } else if (randomNumber6 === 4) {
+    //   // alert( "凶" )
+    //   console.log("吉");
+    //    } else {
+    //   // alert( "お前はもう死んでいる")
+    //   console.log("お前はもう死んでいる");
+    // }
+
+    // }
+    // idがbuttonの要素をクリックしたときに何かする
+    // $("#button").on("click", function () { }) 
+    // で作成を行う
+  
+    // $("#button").on( "click" , function (){
+    //   const mini = 0;
+    //   const max = 6;
+    //   const randomNumber6 = Math.floor(Math.random() * (max - mini + 1)) + mini;
+    //   console.log(randomNumber6);
+    //   // ルール　0大吉　1中吉　2小吉　3吉　4凶
+    //   if (randomNumber6 === 0) {
+    //     // alert("大吉")
+    //     $("#result" ).text("大吉")
+    //   } else if (randomNumber6 === 1) {
+    //     // alert("中吉")
+    //     $("#result").text("中吉")
+    //   } else if (randomNumber6 === 2) {
+    //     // alert("小吉")
+    //     $("#result").text("小吉")
+    //   } else if (randomNumber6 === 3) {
+    //     // alert("吉")
+    //     $("#result").text("吉")
+    //   } else if (randomNumber6 === 4) {
+    //     // alert("凶")
+    //     $("#result").text("凶")
+    //   } else {
+    //     // alert("お前はもう死んでいる")
+    //     $("#result").text("お前はもう死んでいる")
+
+    //   }
+            
+  //   // })
+
+       $("#button").on("click", function () {
+          const mini = 1;
+          const max = 106;
+          const randomNumber6 = Math.floor(Math.random() * (max - mini + 1)) + mini;
+          console.log(randomNumber6);
+          // ルール　0大吉　1中吉　2小吉　3吉　4凶
+          if ( 10 >= randomNumber6 ) {
+            // alert("大吉")
+            $("#result").text("大吉")
+          } else if (11<=randomNumber6 && randomNumber6 <= 50) {
+            // alert("中吉")
+            $("#result").text("中吉")
+          } else if (51 <= randomNumber6 && randomNumber6 <= 60) {
+            // alert("小吉")
+            $("#result").text("小吉")
+          } else if (61 <= randomNumber6 && randomNumber6 <= 80) {
+            // alert("吉")
+            $("#result").text("吉")
+          } else if (81 <= randomNumber6 && randomNumber6 <= 90) {
+            // alert("凶")
+            $("#result").text("凶")
+          } else {
+            // alert("お前はもう死んでいる")
+            $("#result").text("お前はもう死んでいる")
+
+          }
+
+        })   
+
+    
+  
+  </script>
+</body>
+
+</html>

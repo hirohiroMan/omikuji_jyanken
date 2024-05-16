@@ -1,0 +1,156 @@
+.main_box{
+    height: 300px;
+    color: rgb(2, 250, 250);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.main_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: rgb(250, 2, 2);
+    -webkit-animation: blink 1.5s ease-in-out infinite alternate;
+    -moz-animation: blink 1.5s ease-in-out infinite alternate;
+    animation: blink 1.5s ease-in-out infinite alternate;
+}
+@-webkit-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.btn{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 64px;
+}
+
+.janken_box {
+    display: flex;
+    
+    /* 均等に配置 */
+    /* justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+}
+
+.janken_computer_box {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.janken_computer_box_text{
+    color: #222222;
+    display: flex;
+    
+}
+
+.janken_computer_box_box{
+    display: flex;
+    
+}
+.janken_computer_box_box_img{
+    width: 50%;
+}
+.janken_computer_box_box_text{
+    margin-left: 48px;
+    margin-right: 48px;
+    color: #3904f9;
+    display: flex;
+}
+
+.janken_vs_text {
+    margin-top: auto;
+    margin-left: 48px;
+    margin-right: 48px;
+    margin-bottom: auto;
+    font-size: 50px;
+    color: rgb(255, 0, 8);
+
+}
+
+.janken_you_box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.button_box{
+    width: 50%;
+    
+}
+
+.janken_you_box_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.victory_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-style: normal;
+}
+
+/* .yourname {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-style: normal;
+} */
+
+main {
+    max-width: 480px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.button_box {
+    display: flex;
+    width: 30%;
+
+}
+
+section {
+    height: calc(100vh/4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
