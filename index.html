@@ -2,157 +2,238 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>おみくじ</title>
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>運試し</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet" />
+    <link rel="stylesheet" href="css/janken2.css">
 </head>
 
 <body>
-  <main>
+    <!-- main -->
+    <div class="main_box">
+        
+        <img src="./imagesjyanken/じゃんけんタイトル画像.png" alt="">
+        <h1>運試しじゃんけん大会</h1>
+        <img src="./imagesjyanken/じゃんけん大会.png" alt="">
+       
+    </div>
+    <!-- main_text -->
+    <div>
+        <p class="main_text">Let's Try🎶</p>
+    </div>
+        <div>
+            <section id="victory">
+                <p class="victory_text">勝敗は？？</p>
+            </section>
+        </div>
+    <!-- <div class="btn">
+        <button id="btn_text">スタート</button>
+    </div> -->
 
-    <section class="title_section">
-      <h1>おみくじ</h1>
-    </section>
+    <!-- janken -->
+    <div class="janken_box">
+        <div class="janken_computer_box">
+            <div>
+                <p class="janken_computer_box_text">さーかかってこい！！</p>
+            </div>
+            <div style="border:  #ff69b4 solid 1px; font-size: 100%; padding: 30px;">
+                <div class="janken_computer_box_box">
+                    <div class="janken_computer_box_box_img"><img src="./imagesjyanken/ロボット.png" alt=""></div>
+                    <div class="janken_computer_box_box_text"><p id="player">コンピュータの手は？？</p></div>
+                </div>
+                   
+               
+            </div>
 
-    <section class="result_section" id="result">
-      <p>結果は？？</p>
-    </section>
+        </div>
 
-    <section class="button_section">
-      <button id="button">おみくじをひく</button>
-    </section>
+        <div class="janken_vs_text">
+            <p>V.S.</p>
+        </div>
 
-  </main>
- 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
- </script>
-  <script>
-// 復習
-    // const text1 ="G's"
-    // const text2 ="ACADEMY"
-    // alert(text1 + text2);
-    // console.log(text1 + " " + text2);
-
-    
-    // // 乱数の練習
-    // const randomNumber = Math.floor(Math.random() * 5);
-    // // alert(randomNumber);
-    // console.log(randomNumber);
-
-    // // 1-9 を作る際は最後に1を足す
-    // const randomNumber1 = Math.floor(Math.random() * 9) + 1;
-    // // alert(randomNumber1);
-    // console.log(randomNumber1);
-
-    // // 5-10 を作る際は最後に1を足す
-    // const randomNumber2 = Math.floor(Math.random() * 6) + 5;
-    // // alert(randomNumber2);
-    // console.log(randomNumber2);
-
-    // // 50-99 を作る際は最後に1を足す
-    // const randomNumber3 = Math.floor(Math.random() * 50) + 50;
-    // // alert(randomNumber3);
-    // console.log(randomNumber3);
-
-    // // 事前に使ったもの
-
-    // const mini = 0;
-    // const max = 6;
-    // const randomNumber6 = Math.floor(Math.random() * ( max - mini + 1)) + mini;
-    // console.log(randomNumber6);
-
-    // // 条件分岐　まずはかっこを作って後から入れ込む
-    // // if(){} else if {}
-    // // ルール　0大吉　1中吉　2小吉　3吉　4凶
-    // if ( randomNumber6 === 0) {
-    //   // alert ( "大吉")
-    //   console.log("大吉");
-    //  } else if ( randomNumber6 === 1 ) {
-    //   // alert( "中吉" )
-    //   console.log("中吉");
-    //  } else if (randomNumber6 === 2) {
-    //   // alert( "小吉" )
-    //   console.log("小吉");
-    // } else if (randomNumber6 === 3) {
-    //   // alert( "吉" )
-    //   console.log("吉");
-    // } else if (randomNumber6 === 4) {
-    //   // alert( "凶" )
-    //   console.log("吉");
-    //    } else {
-    //   // alert( "お前はもう死んでいる")
-    //   console.log("お前はもう死んでいる");
-    // }
-
-    // }
-    // idがbuttonの要素をクリックしたときに何かする
-    // $("#button").on("click", function () { }) 
-    // で作成を行う
+        <div class="janken_you_box">
+            <div class="janken_you_box_text">
+                <p>どれを出すか選んでね！！</p>
+            </div>
+            <div style="border: #ff69b4 solid 1px; font-size: 100%; padding: 30px;">
+                <div class="button_box">
+                    <div id="button1">
+                        <img src="./imagesjyanken/パー.png" alt="">
+                    </div>
+                    <div id="button2">
+                        <img src="./imagesjyanken/チョキ.jpeg" alt="">
+                    </div>
+                    <div id="button3">
+                        <img src="./imagesjyanken/ダウンロード.png" alt="">
+                    </div>
+                </div>
+            </div>
+     </div>
+    </div>
   
-    // $("#button").on( "click" , function (){
-    //   const mini = 0;
-    //   const max = 6;
-    //   const randomNumber6 = Math.floor(Math.random() * (max - mini + 1)) + mini;
-    //   console.log(randomNumber6);
-    //   // ルール　0大吉　1中吉　2小吉　3吉　4凶
-    //   if (randomNumber6 === 0) {
-    //     // alert("大吉")
-    //     $("#result" ).text("大吉")
-    //   } else if (randomNumber6 === 1) {
-    //     // alert("中吉")
-    //     $("#result").text("中吉")
-    //   } else if (randomNumber6 === 2) {
-    //     // alert("小吉")
-    //     $("#result").text("小吉")
-    //   } else if (randomNumber6 === 3) {
-    //     // alert("吉")
-    //     $("#result").text("吉")
-    //   } else if (randomNumber6 === 4) {
-    //     // alert("凶")
-    //     $("#result").text("凶")
-    //   } else {
-    //     // alert("お前はもう死んでいる")
-    //     $("#result").text("お前はもう死んでいる")
-
-    //   }
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- <script>
+        $("#btn_text").on("click", function () {
+            // 画像がループして出る
+            // math.
+            const mini = 0;
+            const max = 2;
+            const randomNumber = Math.floor(Math.random() * (max - mini + 1)) + mini;
+            console.log(randomNumber);
             
-  //   // })
+            if (randomNumber === 0) {
+                // alert("グー")
+                $("#player").html("グー");
+            } else if (randomNumber === 1) {
+                // alert("チョキ")
+                $("#player").text("チョキ");
+            } else {
+                // alert("パー")
+                $("#player").text("パー");
+            }
+         });
 
-       $("#button").on("click", function () {
-          const mini = 1;
-          const max = 106;
-          const randomNumber6 = Math.floor(Math.random() * (max - mini + 1)) + mini;
-          console.log(randomNumber6);
-          // ルール　0大吉　1中吉　2小吉　3吉　4凶
-          if ( 10 >= randomNumber6 ) {
-            // alert("大吉")
-            $("#result").text("大吉")
-          } else if (11<=randomNumber6 && randomNumber6 <= 50) {
-            // alert("中吉")
-            $("#result").text("中吉")
-          } else if (51 <= randomNumber6 && randomNumber6 <= 60) {
-            // alert("小吉")
-            $("#result").text("小吉")
-          } else if (61 <= randomNumber6 && randomNumber6 <= 80) {
-            // alert("吉")
-            $("#result").text("吉")
-          } else if (81 <= randomNumber6 && randomNumber6 <= 90) {
-            // alert("凶")
-            $("#result").text("凶")
-          } else {
-            // alert("お前はもう死んでいる")
-            $("#result").text("お前はもう死んでいる")
+    </script> -->
+    <script>
 
-          }
+        $("#button1").on("click", function () {
+            const mini = 0;
+            const max = 2;
+            const randomNumber = Math.floor(Math.random() * (max - mini + 1)) + mini;
+            console.log(randomNumber);
+            // ルール　0-33グー 　34-67　チョキ　68-99パー
 
-        })   
+            // if (randomNumber ===) {
+            //   // alert("グー")
+            //   $("#player").text("グー");
+            // } else if (34 <= randomNumber && randomNumber < 68) {
+            //   // alert("チョキ")
+            //   $("#player").text("チョキ");
+            // } else {
+            //   // alert("パー")
+            //   $("#player").text("パー");
+            // }
 
-    
-  
-  </script>
+            if (randomNumber === 0) {
+                // alert("グー")
+                $("#player").text("グー");
+            } else if (randomNumber === 1) {
+                // alert("チョキ")
+                $("#player").text("チョキ");
+            } else {
+                // alert("パー")
+                $("#player").text("パー");
+            }
+
+            //勝敗の表示ルールを作成 
+            if (randomNumber == 0 && button1) {
+                console.log("引き分け")
+                $("#victory").text("引き分け");
+            } else if (randomNumber === 1 && button1) {
+                console.log("勝ち");
+                $("#victory").text("勝ち");
+            } else if (randomNumber == 2 && button1) {
+                console.log("負け");
+                $("#victory").text("負け");
+            }
+            // else if (randomNumber == 0 && button2) {
+            //   console.log("負け");
+            //   $("#victory").text("負け");
+            // } else if (randomNumber == 1 && button2) {
+            //   console.log("あいこ");
+            //   $("#victory").text("あいこ");
+            // } else if (randomNumber == 2 && button2) {
+            //   console.log("勝ち");
+            //   $("#victory").text("勝ち");
+            //   // グーとパー
+            // }
+            // else if (randomNumber === 0 && button3) {
+            //   console.log("勝ち");
+            //   $("#victory").text("勝ち");
+            //   // チョキとパー
+            // } else if (randomNumber === 1 && button3) {
+            //   console.log("負け");
+            //   $("#victory").text("負け");
+            // } else {
+            //   console.log("あいこ");
+            //   $("#victory").text("あいこ");
+            // }
+
+        });
+
+    </script>
+    <script>
+        // チョキボタンの際
+        $("#button2").on("click", function () {
+            const mini = 0;
+            const max = 2;
+            const randomNumber = Math.floor(Math.random() * (max - mini + 1)) + mini;
+            console.log(randomNumber);
+
+            if (randomNumber === 0) {
+                // alert("グー")
+                $("#player").text("グー");
+            } else if (randomNumber === 1) {
+                // alert("チョキ")
+                $("#player").text("チョキ");
+            } else {
+                // alert("パー")
+                $("#player").text("パー");
+            }
+
+            //勝敗の表示ルールを作成 
+            if (randomNumber === 0 && button2) {
+                console.log("負け");
+                $("#victory").text("負け");
+                // チョキとパー
+            } else if (randomNumber === 1 && button2) {
+                console.log("あいこ");
+                $("#victory").text("あいこ");
+            } else {
+                console.log("勝ち");
+                $("#victory").text("勝ち");
+            }
+
+        });
+
+    </script>
+    <script>
+        // ぐーボタンの際
+        $("#button3").on("click", function () {
+            const mini = 0;
+            const max = 2;
+            const randomNumber = Math.floor(Math.random() * (max - mini + 1)) + mini;
+            console.log(randomNumber);
+
+            if (randomNumber === 0) {
+                // alert("グー")
+                $("#player").text("グー");
+            } else if (randomNumber === 1) {
+                // alert("チョキ")
+                $("#player").text("チョキ");
+            } else {
+                // alert("パー")
+                $("#player").text("パー");
+            }
+
+            //勝敗の表示ルールを作成 
+            if (randomNumber == 0 && button3) {
+                console.log("勝ち");
+                $("#victory").text("勝ち");
+            } else if (randomNumber == 1 && button3) {
+                console.log("負け");
+                $("#victory").text("負け");
+            } else if (randomNumber == 2 && button3) {
+                console.log("あいこ");
+                $("#victory").text("あいこ");
+            }
+
+        });
+
+    </script>
+
 </body>
 
 </html>
